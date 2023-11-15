@@ -2,7 +2,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-DEFAULT_IMAGE_URL = "https://images.app.goo.gl/b523bBuZ6NbKBYRD9"
+DEFAULT_IMAGE_URL = "https://i.insider.com/602ee9ced3ad27001837f2ac?width=500&format=jpeg&auto=webp"
 
 def connect_db(app):
     db.app = app
