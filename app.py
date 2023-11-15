@@ -38,8 +38,6 @@ def users_new_form():
 @app.route("/users/new", methods=["POST"])
 def users_new():
     """Handle form submission for creating a new user"""
-    print("Hello")
-    print(request.form['first_name'])
     new_user = User(
         first_name=request.form['first_name'],
         last_name=request.form['last_name'],
