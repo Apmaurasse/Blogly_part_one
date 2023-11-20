@@ -7,18 +7,18 @@
 <div class="row">
 
   {% if user.image_url %}
-  <div class="col-sm-2 col-6">
+  <div class="col-sm-4 col-6">
     <img src="{{ user.image_url }}"
          alt="{{ user.full_name }}"
          class="img-fluid">
   </div>
   {% endif %}
 
-  <div class="col-sm-10 col-12">
+  <div class="col-sm-20 col-24">
     <h1>{{ user.full_name }}</h1>
 
     <form>
-      <button class="btn btn-primary btn-sm"
+      <button class="btn btn-warning btn-sm"
               formaction="/users/{{ user.id }}/edit"
               formmethod="GET">Edit
       </button>
@@ -28,7 +28,7 @@
       </button>
     </form>
 
-    <h2 class="mt-4">Posts</h2>
+    <h2 class="mt-8">Posts</h2>
 
     <ul>
       {% for post in user.posts %}
@@ -39,7 +39,7 @@
       {% endfor %}
     </ul>
 
-    <p><a href="/users/{{ user.id }}/posts/new" class="btn btn-primary">Add Post</a></p>
+    <p><a href="/users/{{ user.id }}/posts/new" class="btn btn-info">Add Post</a></p>
 
   </div>
 </div>

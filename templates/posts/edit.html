@@ -9,14 +9,14 @@
 <form method="POST" action="/posts/{{ post.id }}/edit">
 
   <div class="form-group row">
-    <label for="title" class="col-sm-2 col-form-label">Title</label>
+    <label for="title" class="col-sm-4 col-form-label">Title</label>
     <div class="col-sm-10">
       <input class="form-control" id="title" name="title" value="{{ post.title }}">
     </div>
   </div>
 
   <div class="form-group row">
-    <label for="content" class="col-sm-2 col-form-label">Post Content</label>
+    <label for="content" class="col-sm-4 col-form-label">Post Content</label>
     <div class="col-sm-10">
       <textarea class="form-control"
                 id="content"
@@ -25,8 +25,8 @@
   </div>
 
   <div class="form-group row">
-    <div class="ml-auto mr-3">
-      <a href="/users/{{ post.user_id }}" class="btn btn-outline-info">
+    <div class="ml-auto mr-6">
+      <a href="/users/{{ post.user_id }}" class="btn btn-warning">
         Cancel
       </a>
       <button type="submit" class="btn btn-success">
