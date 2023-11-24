@@ -16,4 +16,16 @@
 
 <p><a class="btn btn-md btn-info" href="/users/new">Add user</a></p>
 
+<h2>Tags</h2>
+
+<ul>
+  {% for tag in tags%}
+  <li>
+    <a href="/tags/{{ tag.id }}">{{ tag.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+<p><a class="btn btn-md btn-info" href="/tags/new">Add Tag</a></p>
+
 {% endblock %}
